@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050505" />
+
+    <meta
+      name="description"
+      content="Academia Workout em Matosinhos: musculação, treino funcional, acompanhamento e Jiu-Jitsu num espaço de alta performance."
+    />
+
+    <meta property="og:title" content="Academia Workout | High Performance" />
+
+    <meta
+      property="og:description"
+      content="Treina sem limites em Matosinhos. Equipamento, acompanhamento, treino funcional e Jiu-Jitsu num espaço de alta performance."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero-poster.webp" />
+
+    <title>Academia Workout | High Performance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/images/favicon/favicon.ico?v=4" sizes="any" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png?v=4"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png?v=4"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png?v=4"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Academia Workout — início">
+          <span class="brand-badge">
+            <img
+              src="assets/images/academia-workout-white-transparent.png"
+              alt="Academia Workout — High Performance"
+              width="277"
+              height="57"
+            />
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primary-nav"
+          aria-label="Navegação principal"
+        >
+          <a href="#academia">A academia</a>
+          <a href="#treino">Treino</a>
+          <a href="#jiujitsu">Jiu-Jitsu</a>
+          <a href="#acompanhamento">Acompanhamento</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contactos">Contactos</a>
+        </nav>
+
+        <a
+          class="button button-small header-cta"
+          href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Marcar visita</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/images/hero-poster.webp"
+        >
+          <source src="assets/video/home2-compressed.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="container hero-content">
+          <p class="eyebrow reveal">Academia Workout · Matosinhos</p>
+          <h1 id="hero-title" class="reveal">
+            Treina<br /><span>sem limites.</span>
+          </h1>
+          <p class="hero-copy reveal">
+            Um espaço pensado para quem quer começar, evoluir e levar o treino
+            mais longe.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="button" href="#contactos">Conhecer a academia</a>
+            <a class="text-link" href="#treino"
+              >Explorar o espaço <span aria-hidden="true">↘</span></a
+            >
+          </div>
+        </div>
+
+        <button
+          class="video-control"
+          type="button"
+          data-video-target=".hero-video"
+          aria-label="Pausar vídeo principal"
+          aria-pressed="false"
+        >
+          <span class="video-control-icon" aria-hidden="true">Ⅱ</span>
+          <span class="video-control-label">Pausar</span>
+        </button>
+
+        <a
+          class="scroll-cue"
+          href="#academia"
+          aria-label="Continuar para a secção seguinte"
+        >
+          <span>Scroll</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="stats-strip" aria-label="Números da Academia Workout">
+        <div class="container stats-grid">
+          <article class="stat reveal">
+            <strong
+              ><span class="counter" data-target="1500">0</span
+              ><sup>m²</sup></strong
+            >
+            <span>de área de ginásio</span>
+          </article>
+          <article class="stat reveal">
+            <strong>+<span class="counter" data-target="150">0</span></strong>
+            <span>máquinas de treino</span>
+          </article>
+          <article class="stat reveal">
+            <strong><span class="counter" data-target="7">0</span>/7</strong>
+            <span>aberto toda a semana</span>
+          </article>
+          <article class="stat reveal">
+            <strong>01</strong>
+            <span>comunidade, todos os níveis</span>
+          </article>
+        </div>
+      </section>
+      <section class="drone-showcase" id="espaco" aria-labelledby="drone-title">
+        <video
+          id="drone-video"
+          class="drone-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/images/gym-overview.webp"
+        >
+          <source src="assets/video/drone2-compressed.mp4" type="video/mp4" />
+        </video>
+        <div class="drone-shade" aria-hidden="true"></div>
+
+        <div class="container drone-content reveal">
+          <p class="eyebrow">Conhece o espaço por inteiro</p>
+          <h2 id="drone-title">Uma academia.<br />Tudo o que precisas.</h2>
+          <p>
+            Musculação, peso livre, treino funcional, cardio e Jiu-Jitsu
+            reunidos num espaço amplo, completo e preparado para todos os
+            níveis.
+          </p>
+          <a class="button" href="#contactos">Marcar uma visita</a>
+        </div>
+
+        <button
+          class="video-control drone-control"
+          type="button"
+          data-video-target="#drone-video"
+          aria-label="Pausar vídeo da academia"
+          aria-pressed="false"
+        >
+          <span class="video-control-icon" aria-hidden="true">Ⅱ</span>
+          <span class="video-control-label">Pausar</span>
+        </button>
+      </section>
+
+      <section class="space-showcase" aria-label="Espaços da Academia Workout">
+        <article class="space-panel space-panel-main reveal">
+          <img
+            src="assets/images/gym-overview.webp"
+            alt="Vista ampla da área principal de musculação da Academia Workout"
+            loading="lazy"
+            width="1440"
+            height="961"
+          />
+          <div class="space-panel-shade"></div>
+          <div class="space-panel-copy">
+            <span>01 · Musculação</span>
+            <h2>Espaço para<br />treinar a sério.</h2>
+          </div>
+        </article>
+
+        <article class="space-panel reveal">
+          <img
+            src="assets/images/functional-training-area.webp"
+            alt="Área de treino funcional com equipamentos e iluminação geométrica"
+            loading="lazy"
+            width="1440"
+            height="961"
+          />
+          <div class="space-panel-shade"></div>
+          <div class="space-panel-copy">
+            <span>02 · Funcional</span>
+            <h3>Liberdade para te mover.</h3>
+          </div>
+        </article>
+      </section>
+
+      <section class="section training" id="treino">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Treino sem distrações</p>
+              <h2>Feito para<br />evoluir.</h2>
+            </div>
+            <p>
+              Do primeiro treino ao objetivo mais exigente, tens as condições
+              certas para construir consistência e melhorar.
+            </p>
+          </div>
+
+          <div class="training-grid">
+            <article class="training-card card-large reveal">
+              <img
+                src="assets/images/machine-press-effort.webp"
+                alt="Atleta a realizar um exercício intenso numa máquina de força"
+                loading="lazy"
+                width="1536"
+                height="2048"
+              />
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span>01</span>
+                <h3>Musculação</h3>
+                <p>
+                  Peso livre, máquinas e variedade para treinar cada grupo
+                  muscular com intenção.
+                </p>
+              </div>
+            </article>
+
+            <article class="training-card reveal">
+              <img
+                src="assets/images/woman-leg-press.webp"
+                alt="Atleta a treinar pernas numa máquina de leg press"
+                loading="lazy"
+                width="1536"
+                height="2048"
+              />
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span>02</span>
+                <h3>Força</h3>
+                <p>
+                  Constrói uma base sólida, melhora a técnica e acompanha o teu
+                  progresso.
+                </p>
+              </div>
+            </article>
+
+            <article class="training-card reveal">
+              <img
+                src="assets/images/seated-dumbbell-athlete.webp"
+                alt="Atleta sentado com halteres depois de uma série"
+                loading="lazy"
+                width="1536"
+                height="2048"
+              />
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <span>03</span>
+                <h3>Performance</h3>
+                <p>
+                  Treino com propósito para resistência, composição corporal e
+                  rendimento.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section jiujitsu-section"
+        id="jiujitsu"
+        aria-labelledby="jiujitsu-title"
+      >
+        <div class="container jiujitsu-grid">
+          <div class="jiujitsu-copy reveal">
+            <p class="eyebrow">Focus Jiu-Jitsu HQ</p>
+            <h2 id="jiujitsu-title">Jiu-Jitsu para<br />todos os níveis.</h2>
+            <p class="lead">
+              Uma das maiores áreas de Jiu-Jitsu da região, dentro da Academia
+              Workout.
+            </p>
+            <p>
+              Com aulas para adultos e crianças, a Focus Jiu-Jitsu HQ recebe
+              quem está a começar e atletas que procuram evoluir ao mais alto
+              nível. Técnica, disciplina, condição física e uma equipa que
+              acompanha cada etapa.
+            </p>
+
+            <div
+              class="jiujitsu-facts"
+              aria-label="Características do espaço de Jiu-Jitsu"
+            >
+              <div>
+                <strong>1000m²</strong>
+                <span>de área de tatami</span>
+              </div>
+              <div>
+                <strong>Adultos</strong>
+                <span>iniciação e competição</span>
+              </div>
+              <div>
+                <strong>Kids</strong>
+                <span>confiança e disciplina</span>
+              </div>
+            </div>
+
+            <div class="jiujitsu-actions">
+              <a
+                class="button button-light"
+                href="https://wa.me/351932665662?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20Jiu-Jitsu%20na%20Academia%20Workout."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Marcar aula experimental</a
+              >
+              <a class="text-link" href="#contactos"
+                >Pedir informações <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+
+          <figure class="jiujitsu-media reveal">
+            <video
+              id="jiujitsu-video"
+              class="jiujitsu-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/images/jiu-jitsu-focus.webp"
+              aria-label="Treino de Jiu-Jitsu na Focus Jiu-Jitsu HQ"
+            >
+              <source
+                src="assets/video/focus-jiu-jitsu-vertical-compressed.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="jiujitsu-video-shade" aria-hidden="true"></div>
+
+            <figcaption>
+              <span>Focus Jiu-Jitsu HQ</span>
+              <strong>Matosinhos · Adultos e crianças</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section coaching" id="acompanhamento">
+        <div class="container coaching-grid">
+          <figure class="coaching-photo reveal">
+            <img
+              src="assets/images/coaching-lat-pulldown.webp"
+              alt="Treinador a acompanhar um membro durante um exercício de lat pulldown"
+              loading="lazy"
+              width="1536"
+              height="2048"
+            />
+            <span class="photo-label">Acompanhamento real</span>
+          </figure>
+
+          <div class="coaching-copy reveal">
+            <p class="eyebrow">Não tens de fazer tudo sozinho</p>
+            <h2>Treina melhor.<br />Evolui com direção.</h2>
+            <p class="lead">
+              Uma boa orientação transforma esforço em progresso.
+            </p>
+            <p>
+              A equipa está presente para ajudar na adaptação aos equipamentos,
+              corrigir movimentos e tornar o treino mais seguro e eficiente seja
+              qual for o teu ponto de partida.
+            </p>
+
+            <ul class="feature-list">
+              <li><span>01</span> Orientação no espaço</li>
+              <li><span>02</span> Apoio técnico</li>
+              <li><span>03</span> Treino pessoal</li>
+            </ul>
+
+            <a
+              class="button button-outline"
+              href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+              target="_blank"
+              rel="noopener noreferrer"
+              >Falar com a equipa</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="galeria">
+        <div class="container">
+          <div class="section-heading gallery-heading reveal">
+            <div>
+              <p class="eyebrow">Dentro da Workout</p>
+              <h2>O Nosso Espaço</h2>
+            </div>
+            <p class="gallery-note">Todos os níveis.</p>
+          </div>
+
+          <div class="gallery-grid" id="gallery-grid">
+            <button
+              class="gallery-item gallery-horizontal reveal"
+              type="button"
+              data-full="assets/images/foto%20gym/DJI_20260720133348_0054_D.jpg"
+              data-alt="Vista geral da Academia Workout"
+            >
+              <img
+                src="assets/images/foto%20gym/DJI_20260720133348_0054_D.jpg"
+                alt="Vista geral da Academia Workout"
+                loading="lazy"
+              />
+              <span>Ver fotografia</span>
+            </button>
+            <button
+              class="gallery-item gallery-horizontal reveal"
+              type="button"
+              data-full="assets/images/foto%20gym/DJI_20260720133700_0059_D.jpg"
+              data-alt="Área principal de treino da Academia Workout"
+            >
+              <img
+                src="assets/images/foto%20gym/DJI_20260720133700_0059_D.jpg"
+                alt="Área principal de treino da Academia Workout"
+                loading="lazy"
+              />
+              <span>Ver fotografia</span>
+            </button>
+            <button
+              class="gallery-item gallery-horizontal gallery-extra reveal"
+              type="button"
+              data-full="assets/images/foto%20gym/RIC07653.jpg"
+              data-alt="Zona de treino da Academia Workout"
+              hidden
+            >
+              <img
+                src="assets/images/foto%20gym/RIC07653.jpg"
+                alt="Zona de treino da Academia Workout"
+                loading="lazy"
+              />
+              <span>Ver fotografia</span>
+              <button
+                class="gallery-item gallery-horizontal reveal"
+                type="button"
+                data-full="assets/images/foto%20gym/DJI_20260720134101_0067_D.jpg"
+                data-alt="Vista ampla da Academia Workout"
+              >
+                <img
+                  src="assets/images/foto%20gym/DJI_20260720134101_0067_D.jpg"
+                  alt="Vista ampla da Academia Workout"
+                  loading="lazy"
+                />
+                <span>Ver fotografia</span>
+              </button>
+              <button
+                class="gallery-item gallery-horizontal reveal"
+                type="button"
+                data-full="assets/images/foto%20gym/RIC07624.jpg"
+                data-alt="Espaço de treino da Academia Workout"
+              >
+                <img
+                  src="assets/images/foto%20gym/RIC07624.jpg"
+                  alt="Espaço de treino da Academia Workout"
+                  loading="lazy"
+                />
+                <span>Ver fotografia</span>
+              </button>
+              <button
+                class="gallery-item gallery-horizontal reveal"
+                type="button"
+                data-full="assets/images/foto%20gym/RIC07629.jpg"
+                data-alt="Equipamento da Academia Workout"
+              >
+                <img
+                  src="assets/images/foto%20gym/RIC07629.jpg"
+                  alt="Equipamento da Academia Workout"
+                  loading="lazy"
+                />
+                <span>Ver fotografia</span>
+              </button>
+              <button
+                class="gallery-item gallery-horizontal gallery-extra reveal"
+                type="button"
+                data-full="assets/images/foto%20gym/RIC07635.jpg"
+                data-alt="Área de musculação da Academia Workout"
+                hidden
+              >
+                <img
+                  src="assets/images/foto%20gym/RIC07635.jpg"
+                  alt="Área de musculação da Academia Workout"
+                  loading="lazy"
+                />
+                <span>Ver fotografia</span>
+              </button>
+              <button
+                class="gallery-item gallery-horizontal gallery-extra reveal"
+                type="button"
+                data-full="assets/images/foto%20gym/RIC07644.jpg"
+                data-alt="Ambiente de treino da Academia Workout"
+                hidden
+              >
+                <img
+                  src="assets/images/foto%20gym/RIC07644.jpg"
+                  alt="Ambiente de treino da Academia Workout"
+                  loading="lazy"
+                />
+                <span>Ver fotografia</span>
+              </button>
+            </button>
+            <button
+              class="gallery-item gallery-horizontal reveal"
+              type="button"
+              data-full="assets/images/foto%20gym/DJI_20260720133719_0060_D.jpg"
+              data-alt="Equipamento e espaço da Academia Workout"
+            >
+              <img
+                src="assets/images/foto%20gym/DJI_20260720133719_0060_D.jpg"
+                alt="Equipamento e espaço da Academia Workout"
+                loading="lazy"
+              />
+              <span>Ver fotografia</span>
+            </button>
+          </div>
+
+          <div class="gallery-actions reveal">
+            <button
+              class="button button-light gallery-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="gallery-grid"
+            >
+              Ver mais fotografias
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-marquee" aria-hidden="true">
+          <div>
+            COMEÇA AGORA · COMEÇA AGORA · COMEÇA AGORA · COMEÇA AGORA ·&nbsp;
+          </div>
+          <div>
+            COMEÇA AGORA · COMEÇA AGORA · COMEÇA AGORA · COMEÇA AGORA ·&nbsp;
+          </div>
+        </div>
+        <div class="container cta-content reveal">
+          <p class="eyebrow">O próximo passo é simples</p>
+          <h2>Vem conhecer<br />a Academia Workout.</h2>
+          <a
+            class="button button-light"
+            href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+            target="_blank"
+            rel="noopener noreferrer"
+            >Marcar uma visita</a
+          >
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contactos">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Visita-nos</p>
+            <h2>O teu próximo treino<br /><span>começa aqui.</span></h2>
+            <p>
+              Estamos em Matosinhos, num espaço preparado para receber
+              iniciantes e atletas experientes.
+            </p>
+
+            <div class="contact-details">
+              <div>
+                <span>Morada</span>
+                <strong
+                  >Rua Afonso Cordeiro 711<br />4450-007 Matosinhos</strong
+                >
+              </div>
+              <div>
+                <span>Horário</span>
+                <strong
+                  >Segunda–Sexta: 06:00–22:00<br />Sábado: 08:00–20:00<br />Domingo:
+                  08:00–18:00</strong
+                >
+              </div>
+              <div class="contact-phone">
+                <span>Telefone / WhatsApp</span>
+                <strong
+                  ><a
+                    href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >+351 932 665 662</a
+                  ></strong
+                >
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="button"
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Afonso+Cordeiro+711+Matosinhos"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Obter direções</a
+              >
+              <a
+                class="button button-outline"
+                href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Enviar WhatsApp</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-visual reveal">
+            <img
+              src="assets/images/coach-member-welcome.webp"
+              alt="Profissional da Academia Workout a cumprimentar um membro"
+              loading="lazy"
+              width="1536"
+              height="2048"
+            />
+            <div class="contact-card">
+              <span>Primeira vez?</span>
+              <strong
+                >Fala com a receção quando chegares. A equipa mostra-te o
+                espaço.</strong
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="mobile-whatsapp"
+      href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Enviar mensagem para a Academia Workout no WhatsApp"
+      >WhatsApp</a
+    >
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="footer-logo" href="#inicio" aria-label="Voltar ao início">
+          <span class="brand-badge">
+            <img
+              src="assets/images/academia-workout-white-transparent.png"
+              alt="Academia Workout — High Performance"
+              width="277"
+              height="57"
+              loading="lazy"
+            />
+          </span>
+        </a>
+        <p>High performance.<br />Um treino de cada vez.</p>
+        <nav aria-label="Navegação do rodapé">
+          <a href="#academia">A academia</a>
+          <a href="#treino">Treino</a>
+          <a href="#jiujitsu">Jiu-Jitsu</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contactos">Contactos</a>
+        </nav>
+        <div class="footer-social">
+          <a
+            href="https://wa.me/351932665662?text=Ol%C3%A1%20Academia%20Workout%2C%20gostaria%20de%20marcar%20uma%20visita."
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp ↗</a
+          >
+          <a
+            href="https://www.instagram.com/academiaworkout/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Academia Workout</span>
+        <span>Matosinhos, Portugal</span>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" aria-label="Visualização da fotografia">
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Fechar fotografia"
+      >
+        ×
+      </button>
+      <img src="" alt="" />
+    </dialog>
+  </body>
+</html>

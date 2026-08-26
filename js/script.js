@@ -19,6 +19,17 @@
 
   if (year) year.textContent = new Date().getFullYear();
 
+  const loadVideoSource = (video) => {
+    const deferredSources = [...video.querySelectorAll("source[data-src]")];
+    if (deferredSources.length === 0) return;
+
+    deferredSources.forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+    video.load();
+  };
+
   const setMenuState = (open) => {
     if (!menuButton || !nav) return;
     menuButton.setAttribute("aria-expanded", String(open));
@@ -96,6 +107,7 @@
     control.addEventListener("click", async () => {
       try {
         if (video.paused) {
+          loadVideoSource(video);
           await video.play();
         } else {
           video.pause();
@@ -114,6 +126,35 @@
     "(prefers-reduced-motion: reduce)",
   ).matches;
   if (prefersReducedMotion) ambientVideos.forEach((video) => video.pause());
+
+  const lazyVideos = [...document.querySelectorAll("[data-lazy-video]")];
+  const loadAndPlayVideo = async (video) => {
+    loadVideoSource(video);
+    try {
+      await video.play();
+    } catch (error) {
+      console.warn("O navegador bloqueou a reprodução do vídeo.", error);
+    }
+  };
+
+  if (!prefersReducedMotion) {
+    if ("IntersectionObserver" in window) {
+      const videoObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            loadAndPlayVideo(entry.target);
+            observer.unobserve(entry.target);
+          });
+        },
+        { rootMargin: "100px 0px", threshold: 0 },
+      );
+
+      lazyVideos.forEach((video) => videoObserver.observe(video));
+    } else {
+      lazyVideos.forEach(loadAndPlayVideo);
+    }
+  }
 
   const revealItems = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !prefersReducedMotion) {

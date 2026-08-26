@@ -10,7 +10,13 @@
       content="Academia Workout em Matosinhos: musculação, treino funcional, acompanhamento e Jiu-Jitsu num espaço de alta performance."
     />
 
-    <meta property="og:title" content="Academia Workout | High Performance" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.academia-workout.com/" />
+
+    <meta
+      property="og:title"
+      content="Ginásio em Matosinhos | Academia Workout"
+    />
 
     <meta
       property="og:description"
@@ -18,16 +24,54 @@
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/images/hero-poster.webp" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:site_name" content="Academia Workout" />
+    <meta property="og:url" content="https://www.academia-workout.com/" />
+    <meta
+      property="og:image"
+      content="https://www.academia-workout.com/assets/images/og-academia-workout.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Vista panorâmica do ginásio Academia Workout em Matosinhos"
+    />
 
-    <title>Academia Workout | High Performance</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ginásio em Matosinhos | Academia Workout"
+    />
+    <meta
+      name="twitter:description"
+      content="Treina sem limites em Matosinhos. Equipamento, acompanhamento, treino funcional e Jiu-Jitsu num espaço de alta performance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.academia-workout.com/assets/images/og-academia-workout.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Vista panorâmica do ginásio Academia Workout em Matosinhos"
+    />
+
+    <title>Ginásio em Matosinhos | Academia Workout</title>
+
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero-poster.webp"
+      fetchpriority="high"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
 
@@ -57,6 +101,67 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="js/script.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.academia-workout.com/#website",
+            "url": "https://www.academia-workout.com/",
+            "name": "Academia Workout",
+            "inLanguage": "pt-PT",
+            "publisher": {
+              "@id": "https://www.academia-workout.com/#business"
+            }
+          },
+          {
+            "@type": "HealthClub",
+            "@id": "https://www.academia-workout.com/#business",
+            "name": "Academia Workout",
+            "url": "https://www.academia-workout.com/",
+            "telephone": "+351932665662",
+            "image": "https://www.academia-workout.com/assets/images/og-academia-workout.jpg",
+            "logo": "https://www.academia-workout.com/assets/images/academia-workout.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rua Afonso Cordeiro 711",
+              "postalCode": "4450-007",
+              "addressLocality": "Matosinhos",
+              "addressCountry": "PT"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "06:00",
+                "closes": "22:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "08:00",
+                "closes": "18:00"
+              }
+            ],
+            "sameAs": ["https://www.instagram.com/academiaworkout/"]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Saltar para o conteúdo</a>
@@ -68,8 +173,8 @@
             <img
               src="assets/images/academia-workout-white-transparent.png"
               alt="Academia Workout — High Performance"
-              width="277"
-              height="57"
+              width="2215"
+              height="399"
             />
           </span>
         </a>
@@ -89,7 +194,7 @@
           id="primary-nav"
           aria-label="Navegação principal"
         >
-          <a href="#academia">A academia</a>
+          <a href="#espaco">A academia</a>
           <a href="#treino">Treino</a>
           <a href="#jiujitsu">Jiu-Jitsu</a>
           <a href="#acompanhamento">Acompanhamento</a>
@@ -153,7 +258,7 @@
 
         <a
           class="scroll-cue"
-          href="#academia"
+          href="#espaco"
           aria-label="Continuar para a secção seguinte"
         >
           <span>Scroll</span>
@@ -165,17 +270,17 @@
         <div class="container stats-grid">
           <article class="stat reveal">
             <strong
-              ><span class="counter" data-target="1500">0</span
+              ><span class="counter" data-target="1500">1500</span
               ><sup>m²</sup></strong
             >
             <span>de área de ginásio</span>
           </article>
           <article class="stat reveal">
-            <strong>+<span class="counter" data-target="150">0</span></strong>
+            <strong>+<span class="counter" data-target="150">150</span></strong>
             <span>máquinas de treino</span>
           </article>
           <article class="stat reveal">
-            <strong><span class="counter" data-target="7">0</span>/7</strong>
+            <strong><span class="counter" data-target="7">7</span>/7</strong>
             <span>aberto toda a semana</span>
           </article>
           <article class="stat reveal">
@@ -188,14 +293,17 @@
         <video
           id="drone-video"
           class="drone-video"
-          autoplay
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="none"
+          data-lazy-video
           poster="assets/images/gym-overview.webp"
         >
-          <source src="assets/video/drone2-compressed.mp4" type="video/mp4" />
+          <source
+            data-src="assets/video/drone2-compressed.mp4"
+            type="video/mp4"
+          />
         </video>
         <div class="drone-shade" aria-hidden="true"></div>
 
@@ -384,16 +492,16 @@
             <video
               id="jiujitsu-video"
               class="jiujitsu-video"
-              autoplay
               muted
               loop
               playsinline
-              preload="metadata"
+              preload="none"
+              data-lazy-video
               poster="assets/images/jiu-jitsu-focus.webp"
               aria-label="Treino de Jiu-Jitsu na Focus Jiu-Jitsu HQ"
             >
               <source
-                src="assets/video/focus-jiu-jitsu-vertical-compressed.mp4"
+                data-src="assets/video/focus-jiu-jitsu-vertical-compressed.mp4"
                 type="video/mp4"
               />
             </video>
@@ -415,8 +523,8 @@
               src="assets/images/coaching-lat-pulldown.webp"
               alt="Treinador a acompanhar um membro durante um exercício de lat pulldown"
               loading="lazy"
-              width="1536"
-              height="2048"
+              width="1200"
+              height="1600"
             />
             <span class="photo-label">Acompanhamento real</span>
           </figure>
@@ -468,9 +576,12 @@
               data-alt="Vista geral da Academia Workout"
             >
               <img
-                src="assets/images/foto%20gym/DJI_20260720133348_0054_D.jpg"
+                src="assets/images/gallery/dji-0054-gallery.webp"
                 alt="Vista geral da Academia Workout"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="720"
               />
               <span>Ver fotografia</span>
             </button>
@@ -481,9 +592,12 @@
               data-alt="Área principal de treino da Academia Workout"
             >
               <img
-                src="assets/images/foto%20gym/DJI_20260720133700_0059_D.jpg"
+                src="assets/images/gallery/dji-0059-gallery.webp"
                 alt="Área principal de treino da Academia Workout"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="718"
               />
               <span>Ver fotografia</span>
             </button>
@@ -495,21 +609,28 @@
               hidden
             >
               <img
-                src="assets/images/foto%20gym/RIC07653.jpg"
+                src="assets/images/gallery/ric-7653-gallery.webp"
                 alt="Zona de treino da Academia Workout"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="814"
               />
               <span>Ver fotografia</span>
-              <button
+            </button>
+            <button
                 class="gallery-item gallery-horizontal reveal"
                 type="button"
                 data-full="assets/images/foto%20gym/DJI_20260720134101_0067_D.jpg"
                 data-alt="Vista ampla da Academia Workout"
               >
                 <img
-                  src="assets/images/foto%20gym/DJI_20260720134101_0067_D.jpg"
+                  src="assets/images/gallery/dji-0067-gallery.webp"
                   alt="Vista ampla da Academia Workout"
                   loading="lazy"
+                  decoding="async"
+                  width="1280"
+                  height="720"
                 />
                 <span>Ver fotografia</span>
               </button>
@@ -520,9 +641,12 @@
                 data-alt="Espaço de treino da Academia Workout"
               >
                 <img
-                  src="assets/images/foto%20gym/RIC07624.jpg"
+                  src="assets/images/gallery/ric-7624-gallery.webp"
                   alt="Espaço de treino da Academia Workout"
                   loading="lazy"
+                  decoding="async"
+                  width="1280"
+                  height="854"
                 />
                 <span>Ver fotografia</span>
               </button>
@@ -533,9 +657,12 @@
                 data-alt="Equipamento da Academia Workout"
               >
                 <img
-                  src="assets/images/foto%20gym/RIC07629.jpg"
+                  src="assets/images/gallery/ric-7629-gallery.webp"
                   alt="Equipamento da Academia Workout"
                   loading="lazy"
+                  decoding="async"
+                  width="1280"
+                  height="854"
                 />
                 <span>Ver fotografia</span>
               </button>
@@ -547,9 +674,12 @@
                 hidden
               >
                 <img
-                  src="assets/images/foto%20gym/RIC07635.jpg"
+                  src="assets/images/gallery/ric-7635-gallery.webp"
                   alt="Área de musculação da Academia Workout"
                   loading="lazy"
+                  decoding="async"
+                  width="1280"
+                  height="854"
                 />
                 <span>Ver fotografia</span>
               </button>
@@ -561,13 +691,15 @@
                 hidden
               >
                 <img
-                  src="assets/images/foto%20gym/RIC07644.jpg"
+                  src="assets/images/gallery/ric-7644-gallery.webp"
                   alt="Ambiente de treino da Academia Workout"
                   loading="lazy"
+                  decoding="async"
+                  width="1280"
+                  height="774"
                 />
                 <span>Ver fotografia</span>
               </button>
-            </button>
             <button
               class="gallery-item gallery-horizontal reveal"
               type="button"
@@ -575,9 +707,12 @@
               data-alt="Equipamento e espaço da Academia Workout"
             >
               <img
-                src="assets/images/foto%20gym/DJI_20260720133719_0060_D.jpg"
+                src="assets/images/gallery/dji-0060-gallery.webp"
                 alt="Equipamento e espaço da Academia Workout"
                 loading="lazy"
+                decoding="async"
+                width="1280"
+                height="750"
               />
               <span>Ver fotografia</span>
             </button>
@@ -709,15 +844,15 @@
             <img
               src="assets/images/academia-workout-white-transparent.png"
               alt="Academia Workout — High Performance"
-              width="277"
-              height="57"
+              width="2215"
+              height="399"
               loading="lazy"
             />
           </span>
         </a>
         <p>High performance.<br />Um treino de cada vez.</p>
         <nav aria-label="Navegação do rodapé">
-          <a href="#academia">A academia</a>
+          <a href="#espaco">A academia</a>
           <a href="#treino">Treino</a>
           <a href="#jiujitsu">Jiu-Jitsu</a>
           <a href="#galeria">Galeria</a>

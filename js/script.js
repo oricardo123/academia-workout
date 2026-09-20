@@ -19,6 +19,28 @@
 
   if (year) year.textContent = new Date().getFullYear();
 
+  // Avoid covering the visible WhatsApp buttons with the fixed mobile link.
+  const mobileWhatsApp = document.querySelector(".mobile-whatsapp");
+  if (mobileWhatsApp && "IntersectionObserver" in window) {
+    const visibleContactLinks = new Set();
+    const contactObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visibleContactLinks.add(entry.target);
+        else visibleContactLinks.delete(entry.target);
+      });
+      mobileWhatsApp.classList.toggle(
+        "is-suppressed",
+        visibleContactLinks.size > 0,
+      );
+    });
+
+    document
+      .querySelectorAll(
+        '.hero-actions a[href^="https://wa.me/"], .contact-actions a[href^="https://wa.me/"]',
+      )
+      .forEach((link) => contactObserver.observe(link));
+  }
+
   const loadVideoSource = (video) => {
     const deferredSources = [...video.querySelectorAll("source[data-src]")];
     if (deferredSources.length === 0) return;

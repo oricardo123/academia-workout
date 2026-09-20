@@ -166,7 +166,7 @@
   const accept = element("button");
   const close = element("button", "analytics-consent-close");
   [reject, accept, close].forEach((button) => { button.type = "button"; });
-  actions.append(reject, accept, close);
+  actions.append(accept, reject, close);
   banner.append(content, actions);
   document.body.append(banner);
 
@@ -203,7 +203,7 @@
     banner.hidden = false;
     document.body.classList.add("analytics-consent-open");
     preferences.setAttribute("aria-expanded", "true");
-    if (focus) { returnFocus = preferences; reject.focus(); }
+    if (focus) { returnFocus = preferences; accept.focus(); }
   }
   reject.addEventListener("click", () => {
     saveConsent("denied"); hideBanner(); stopAnalytics();

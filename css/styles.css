@@ -1019,6 +1019,34 @@ h1 span {
   margin-inline: auto;
 }
 
+.questions-list details {
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.questions-list details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.questions-list summary {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-height: 44px;
+  align-content: center;
+}
+
+.questions-list p {
+  max-width: 70ch;
+  margin: 1rem 0 0;
+  line-height: 1.7;
+}
+
+.questions-list p a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .contact-section {
   background: var(--black);
 }

@@ -507,6 +507,12 @@ h1 span {
   vertical-align: super;
 }
 
+.stat .stat-hours {
+  font-size: clamp(3rem, 4.5vw, 5rem);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
 .stat > span {
   color: var(--grey);
   font-size: 0.74rem;
@@ -1413,6 +1419,10 @@ h1 span {
 
   .stat strong {
     font-size: 3.4rem;
+  }
+
+  .stat .stat-hours {
+    font-size: clamp(2.35rem, 12vw, 3rem);
   }
 
   .space-panel {

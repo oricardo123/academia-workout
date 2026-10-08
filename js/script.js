@@ -159,6 +159,20 @@
     }
   };
 
+  // Let the initial content, poster, fonts and consent render before the large
+  // background video uses the connection. Keep the original video and playback.
+  const heroVideo = document.querySelector(".hero-video");
+  if (heroVideo && !prefersReducedMotion) {
+    const startHero = () => window.requestAnimationFrame(() => {
+      // A second frame leaves an opportunity to paint the loaded page first.
+      window.requestAnimationFrame(() => {
+        if (heroVideo.querySelector("source[data-src]")) loadAndPlayVideo(heroVideo);
+      });
+    });
+    if (document.readyState === "complete") startHero();
+    else window.addEventListener("load", startHero, { once: true });
+  }
+
   if (!prefersReducedMotion) {
     if ("IntersectionObserver" in window) {
       const videoObserver = new IntersectionObserver(

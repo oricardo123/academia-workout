@@ -70,14 +70,8 @@
       fetchpriority="high"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Favicons -->
     <link rel="icon" href="assets/images/favicon/favicon.ico?v=4" sizes="any" />
@@ -102,10 +96,10 @@
       href="assets/images/favicon/apple-touch-icon.png?v=4"
     />
 
-    <link rel="stylesheet" href="css/styles.css?v=20260924-1" />
-    <link rel="stylesheet" href="css/analytics-consent.css?v=20260920-1" />
+    <link rel="stylesheet" href="css/styles.css?v=20261008-1" />
 
-    <script src="js/script.js" defer></script>
+    <script defer src="js/site-analytics.js?v=20260920-2" data-site-analytics="" data-measurement-id="G-YXJL6ZBKG0" data-allowed-hosts="www.academia-workout.com,academia-workout.com"></script>
+    <script src="js/script.js?v=20261008-1" defer></script>
 
     <script type="application/ld+json">
       {
@@ -176,10 +170,10 @@
         <a class="brand" href="#inicio" aria-label="Academia Workout — início">
           <span class="brand-badge">
             <img
-              src="assets/images/academia-workout-white-transparent.png"
+              src="assets/images/academia-workout-white-924.webp"
               alt="Academia Workout — High Performance"
-              width="2215"
-              height="399"
+              width="924"
+              height="167"
             />
           </span>
         </a>
@@ -223,10 +217,10 @@
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="none"
           poster="assets/images/hero-poster.webp"
         >
-          <source src="assets/video/home2-compressed.mp4" type="video/mp4" />
+          <source data-src="assets/video/home2-compressed.mp4" type="video/mp4" />
         </video>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
@@ -875,10 +869,10 @@
         <a class="footer-logo" href="#inicio" aria-label="Voltar ao início">
           <span class="brand-badge">
             <img
-              src="assets/images/academia-workout-white-transparent.png"
+              src="assets/images/academia-workout-white-924.webp"
               alt="Academia Workout — High Performance"
-              width="2215"
-              height="399"
+              width="924"
+              height="167"
               loading="lazy"
             />
           </span>
@@ -923,6 +917,5 @@
       </button>
       <img src="" alt="" />
     </dialog>
-    <script defer src="js/site-analytics.js?v=20260920-2" data-site-analytics="" data-measurement-id="G-YXJL6ZBKG0" data-allowed-hosts="www.academia-workout.com,academia-workout.com"></script>
   </body>
 </html>

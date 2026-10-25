@@ -1236,11 +1236,16 @@ h1 span {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(2rem);
+  opacity: 1;
+  transform: translateY(0);
   transition:
     opacity 700ms ease,
     transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-reveal-pending {
+  opacity: 0;
+  transform: translateY(2rem);
 }
 
 .reveal.is-visible {
@@ -1547,7 +1552,8 @@ h1 span {
     transition-duration: 0.01ms !important;
   }
 
-  .reveal {
+  .reveal,
+  .reveal.is-reveal-pending {
     opacity: 1;
     transform: none;
   }

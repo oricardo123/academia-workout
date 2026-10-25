@@ -212,22 +212,50 @@
   }
 
   const revealItems = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !prefersReducedMotion) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.13, rootMargin: "0px 0px -4%" },
-    );
+  let revealObserver;
+  const showRevealItems = () => {
+    revealItems.forEach((item) => {
+      item.classList.remove("is-reveal-pending");
+      item.classList.add("is-visible");
+    });
+    try {
+      revealObserver?.disconnect();
+    } catch {
+      // Content stays visible even if an observer implementation fails.
+    }
+  };
 
-    revealItems.forEach((item) => revealObserver.observe(item));
+  if (typeof window.IntersectionObserver === "function" && !prefersReducedMotion) {
+    try {
+      revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          try {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.remove("is-reveal-pending");
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          } catch {
+            showRevealItems();
+          }
+        },
+        { threshold: 0.13, rootMargin: "0px 0px -4%" },
+      );
+
+      // Keep the HTML visible until every item is successfully observed.
+      revealItems.forEach((item) => revealObserver.observe(item));
+      revealItems.forEach((item) => {
+        if (!item.classList.contains("is-visible")) {
+          item.classList.add("is-reveal-pending");
+        }
+      });
+    } catch {
+      showRevealItems();
+    }
   } else {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
+    showRevealItems();
   }
 
   const counters = document.querySelectorAll(".counter");

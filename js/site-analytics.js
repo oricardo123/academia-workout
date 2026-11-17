@@ -41,6 +41,20 @@
     } catch { return ""; }
   }
 
+  // Forward only the approved Instagram bio labels, never arbitrary URL data.
+  // Untagged searches/referrals keep their original referrer for GA4 attribution.
+  function campaignAttribution(value) {
+    try {
+      const params = new URL(value).searchParams;
+      const expected = {utm_source: "instagram", utm_medium: "social", utm_campaign: "bio"};
+      if (!Object.entries(expected).every(([key, label]) => {
+        const values = params.getAll(key);
+        return values.length === 1 && values[0] === label;
+      })) return {};
+      return {campaign_source: "instagram", campaign_medium: "social", campaign_name: "bio"};
+    } catch { return {}; }
+  }
+
   function clearAnalyticsCookies() {
     const names = ["_ga", `_ga_${measurementId.slice(2)}`];
     const hostParts = location.hostname.split(".");
@@ -67,6 +81,7 @@
     window.gtag("set", "ads_data_redaction", true);
     window.gtag("js", new Date());
     window.gtag("config", measurementId, {
+      ...campaignAttribution(location.href),
       send_page_view: false,
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
